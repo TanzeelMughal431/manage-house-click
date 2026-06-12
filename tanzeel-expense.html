@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzeel Financial Manager</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #f4f4f9;
+            --accent-color: #4a90e2;
+        }
+
+        body.dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f4f4f4;
+            --card-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: var(--card-bg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        p { line-height: 1.6; color: #777; }
+
+        .btn {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); }
+
+        footer { text-align: center; margin-top: 50px; font-size: 0.8em; opacity: 0.6; }
+
+        #theme-toggle { cursor: pointer; padding: 5px 10px; border-radius: 5px; border: none; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tanzeel Expense Tracker</h1>
+    <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+</header>
+
+<div class="container">
+    <h2>Welcome</h2>
+    <p>Efficiently manage your expenses with our simple tracker. Choose an option below to record your financial entries directly to our system.</p>
+
+    <a href="https://docs.google.com/forms/d/1IzQHFId749Y64jIWSwWPGowjVkAsnqX4mNVKLW-krJQ/viewform" class="btn">Add Household Expenses</a>
+    <a href="https://docs.google.com/forms/d/1BwvMSCGkSxLsugL57VsRnGLK5Iaa5Cnm4rc24vncQaA/viewform" class="btn">Add Adil's Shared Expenses</a>
+</div>
+
+<footer>
+    &copy; 2026 Tanzeel Financial Solutions. All rights reserved.
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+</body>
+</html>
